@@ -43,13 +43,12 @@ router.put("/api/workouts/:id", (req, res) => {
     });
 });
 
-router.get("/api/workouts/range", (req, res) => {
-    Workout.find()
-    .then((dbWorkout) => {
+router.get("/api/workouts/stats", (req, res) => {
+    Workout.find({})
+    .then(dbWorkout => {
         res.json(dbWorkout);
-    })
-    .catch((err) => {
-        res.json(err);
+    }).catch((err) => {
+        res.status(400).json(err);
     });
 });
 
