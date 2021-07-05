@@ -31,3 +31,15 @@ router.get("/api/workouts", (req, res) => {
         res.json(err);
     });
 });
+
+router.get("/api/workout/range", (req, res) => {
+    Workout.find()
+    .then((dbWorkout) => {
+        res.json(dbWorkout);
+    })
+    .catch((Err) => {
+        res.json(err);
+    });
+});
+
+module.exports = router;
