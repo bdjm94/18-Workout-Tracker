@@ -17,5 +17,9 @@ exercises: [{
         trim: true,
         required: "Please enter the exercise name"
     },
+    duration: {
+        type: Number,
+        required: "Please enter the duration of your workout (minutes)"
+    }
 }]
 })
