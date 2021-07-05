@@ -12,5 +12,10 @@ exercises: [{
         trim: true,
         required: "What workout are you doing today?"
     },
+    name: {
+        type: String,
+        trim: true,
+        required: "Please enter the exercise name"
+    },
 }]
 })
