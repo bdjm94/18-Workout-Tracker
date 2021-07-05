@@ -32,12 +32,12 @@ router.get("/api/workouts", (req, res) => {
     });
 });
 
-router.get("/api/workout/range", (req, res) => {
+router.get("/api/workouts/range", (req, res) => {
     Workout.find()
     .then((dbWorkout) => {
         res.json(dbWorkout);
     })
-    .catch((Err) => {
+    .catch((err) => {
         res.json(err);
     });
 });
