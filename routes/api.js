@@ -2,7 +2,13 @@ const router = require("express").Router();
 const Workout = require("../models/workout");
 
 router.post("/api/workouts", ({ body }, res) => {
-    Workout.create(body)
+    Workout.aggregate([{
+        $addFields: {
+            totalDuration: {
+                $sum: "$exercises.duration"
+            }
+        }
+    }])
     .then(dbWorkout => {
         res.json(dbWorkout);
     })
