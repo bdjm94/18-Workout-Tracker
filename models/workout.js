@@ -20,6 +20,18 @@ exercises: [{
     duration: {
         type: Number,
         required: "Please enter the duration of your workout (minutes)"
+    },
+    weight: {
+        type: Number,
+    },
+    reps: {
+        type: Number,
+    },
+    sets: {
+        type: Number,
+    },
+    distance: {
+        type: Number,
     }
 }]
-})
+});
